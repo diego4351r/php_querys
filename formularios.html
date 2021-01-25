@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+	<META CHARSET="UTF-8">
+	<STYLE>
+	body {
+		width: 450px;
+		font-family: Verdana, Arial, sans-serif;
+		font-size: 12px;
+	}
+	h3 {
+		background-color: #E0E0E0;
+		padding: 4px 0px 4px 8px;
+	}
+	td {
+		font-size: 12px;
+	}
+	input[readonly] {
+		color: #808080;
+	}
+	.text-right {
+		text-align: right;
+	}
+	</STYLE>
+</HEAD>
+<BODY>
+	<H3>Formulario para dar de alta un usuario</H3>
+	<FORM ID="formulario1" NAME="formRegistro" ACTION="registro.php" METHOD="post">
+	<TABLE>
+		<TR>
+			<TD>Tu nombre:</TD>
+			<TD><INPUT TYPE="text" ID="entrada1" NAME="nombreUsuario" /></TD>
+		</TR>
+		<TR>
+			<TD>Tu contraseña:</TD>
+			<TD><INPUT TYPE="password" ID="entrada2" NAME="clave" /></TD>
+		</TR>
+		<TR>
+			<TD>Tu email:</TD>
+			<TD><INPUT TYPE="text" ID="entrada3" NAME="email" /></TD>
+		</TR>
+		<TR>
+			<TD>Tu país:</TD>
+			<TD>
+				<SELECT ID="seleccion1" NAME="pais">
+					<OPTION ID="opcion1" VALUE="AND">Andorra</OPTION>
+					<OPTION ID="opcion2" VALUE="ESP" SELECTED>España</OPTION>
+					<OPTION ID="opcion3" VALUE="POR" >Portugal</OPTION>
+				</SELECT>
+			</TD>
+		</TR>
+	</TABLE>
+	<DIV class="text-right">
+		<INPUT TYPE="reset" ID="boton1" NAME="limpiar" />
+		<INPUT TYPE="submit" ID="boton2" NAME="enviar" /> 
+	</DIV>
+	</FORM>
+	<H3>Formulario para subir ficheros al servidor</H3>
+	<FORM ID="formulario2" NAME="formFicheros" ACTION="fichero.php" METHOD="post" ENCTYPE="multipart/form-data">
+	<TABLE>
+		<TR>
+			<TD>Fichero:</TD>
+			<TD><INPUT TYPE="file" ID="entrada4" NAME="fichero" /></TD>
+		</TR>
+		<TR>
+			<TD>Descripción:</TD>
+			<TD><TEXTAREA ID="entrada5" NAME="descripcion"></TEXTAREA></TD>
+		</TR>
+		<TR>
+			<TD>&nbsp;</TD>
+			<TD><INPUT TYPE="checkbox" ID="seleccion2" NAME="comprimir" /> Comprimir en ZIP</TD>
+		</TR>
+	</TABLE>
+	<DIV class="text-right">
+		<INPUT TYPE="reset" ID="boton3" NAME="limpiar" VALUE="Cambiar fichero"/>
+		<INPUT TYPE="submit" ID="boton4" NAME="enviar" VALUE="Subir fichero"/>
+	</DIV>
+	</FORM>
+	<H3>Formulario para confirmar una compra</H3>
+	<FORM ID="formulario3" NAME="formCompra" ACTION="comprar.php">
+	<!-- Campo oculto con la fase del proceso de compra -->
+	<INPUT TYPE="hidden" ID="entrada6" NAME="fase" VALUE="confirmacion">
+	<TABLE>
+		<TR>
+			<TD>Tu usuario:</TD>
+			<TD><INPUT TYPE="text" ID="entrada7" NAME="usuario"></TD>
+		</TR>
+		<TR>
+			<TD>Importe total:</TD>
+			<TD><INPUT TYPE="text" ID="entrada8" NAME="importe" VALUE="54,75" READONLY> euros</TD>
+		</TR>
+		<TR>
+			<TD>Pago:</TD>
+			<TD>
+				<INPUT TYPE="radio" ID="seleccion3" NAME="pago" VALUE="Tarjeta"> Tarjeta VISA/MASTERCARD<BR />
+				<INPUT TYPE="radio" ID="seleccion4" NAME="pago" VALUE="Paypal"> Paypal<BR />
+				<INPUT TYPE="radio" ID="seleccion5" NAME="pago" VALUE="Efectivo" CHECKED> En efectivo<BR /><BR />
+			</TD>
+		</TR>
+	</TABLE>
+	<DIV class="text-right">
+		<INPUT TYPE="button" ID="boton5" NAME="confirmar" VALUE="Confirmar y seguir >" />
+	</DIV>
+	</FORM>
+</BODY>
+</HTML>
