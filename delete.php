@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 	} finally 
   {
     //cerrar la conexion 
-    $pdo = null;
+    $dbh = null;
     
   }
 }
