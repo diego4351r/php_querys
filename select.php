@@ -4,9 +4,9 @@ if (isset($_POST['submit'])) {
 	try
 	{
 		//datos de la conexión
-    $servidor = 'localhost';
-    $dbname = 'nombreBD';
-    $user = 'usuario';
+		$servidor = 'localhost';
+		$dbname = 'nombreBD';
+		$user = 'root';
 		$password = 'password';
 		
 		//conexion a mysql
