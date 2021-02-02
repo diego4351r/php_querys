@@ -14,8 +14,8 @@ if (isset($_POST['submit'])) {
 		$dbh = new PDO($dsn, $user, $password);
 		
 		//Gestion de errores
-		$dbh->setAttribute(PDO::ATTRR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+		$dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+			
 		// prepare the query
 		$sql = "INSERT INTO 
 				table
